@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Authentication
 gem 'devise'
 gem 'omniauth-google-oauth2'
-gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -46,6 +47,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'letter_opener'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

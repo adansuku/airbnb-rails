@@ -271,7 +271,17 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :google_oauth2, Rails.application.credentials.google[:client_id], Rails.application.credentials.google[:client_secret], scope: 'email'
+
+  config.omniauth(
+    :google_oauth2, 
+    Rails.application.credentials.google[:client_id], 
+    Rails.application.credentials.google[:client_secret], 
+    name: 'google',
+    access_type: 'offline',
+    image_aspect_ratio: 'square',
+    strategy_class: OmniAuth::Strategies::GoogleOauth2,
+    scope: 'email'
+  )
   #provider :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
 
   
