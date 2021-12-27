@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_24_083959) do
+ActiveRecord::Schema.define(version: 2021_12_24_115318) do
+
+  create_table "listings", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "host_id", null: false
+    t.string "title", null: false
+    t.text "about"
+    t.integer "max_guest", default: 1
+    t.string "address_line1"
+    t.string "address_line2"
+    t.string "city"
+    t.string "state"
+    t.string "postal_code"
+    t.string "country"
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["host_id"], name: "index_listings_on_host_id"
+  end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -43,4 +62,5 @@ ActiveRecord::Schema.define(version: 2021_12_24_083959) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "listings", "users", column: "host_id"
 end

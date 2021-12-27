@@ -48,6 +48,20 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'letter_opener'
+  gem 'annotate'
+
+  # Basic Pry Setup https://github.com/pry/pry
+  gem 'awesome_print' # pretty print ruby objects
+  gem 'pry', '~> 0.13.0' # Console with powerful introspection capabilities
+  gem 'pry-byebug' # Integrates pry with byebug
+  gem 'pry-doc' # Provide MRI Core documentation
+  gem 'pry-rails' # Causes rails console to open pry. `DISABLE_PRY_RAILS=1 rails c` can still open with IRB
+  
+  # Auxiliary Gems
+  # gem 'pry-rescue' # Start a pry session whenever something goes wrong
+  # gem 'pry-theme' # An easy way to customize Pry colors via theme files
+  # gem 'pry-stack_explorer' # Allows navigating Pry call stack
+  # gem 'binding_of_caller' # To evaluate code from a higher up call stack context
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

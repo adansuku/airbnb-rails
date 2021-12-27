@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :host do
+    resources :listings
+    # get 'listings/new'
+    # get 'listings/edit'
+    # get 'listings/index'
+    # get 'listings/show'
+  end
   get 'static_pages/home'
   root to: "static_pages#home"
 
