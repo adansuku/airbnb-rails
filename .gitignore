@@ -40,3 +40,6 @@ tmp/
 .ruby-version
 
 .browserslistrc
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
