@@ -12,31 +12,11 @@
   </head>
 
   <body>
+      <%= render partial: "layouts/navbar" %>
+      <%= render partial: "layouts/errors" %>
 
-      
-
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <main class="container mx-auto mt-10 px-5 flex">
-      <ul class="flex">
-        <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
-        </li>
-      </ul>
-
+      <main class="container h-full mx-auto mt-10 px-5">
           <%= yield %>
       </main>
-       <% if user_signed_in? %>
-        <%= button_to "logout", destroy_user_session_path, method: :delete %>
-      <% end %>
   </body>
 </html>
