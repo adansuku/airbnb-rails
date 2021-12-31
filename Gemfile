@@ -62,9 +62,15 @@ group :development do
   # gem 'pry-theme' # An easy way to customize Pry colors via theme files
   # gem 'pry-stack_explorer' # Allows navigating Pry call stack
   # gem 'binding_of_caller' # To evaluate code from a higher up call stack context
+
+  #Browsersync
+  gem 'browser_sync_rails', '~> 0.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "tailwindcss-rails", "~> 2.0"
+
+
+gem "stimulus-rails", "~> 1.0"

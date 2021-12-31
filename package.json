@@ -12,6 +12,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.3.0",
     "webpack-dev-server": "^3"
   }
 }
